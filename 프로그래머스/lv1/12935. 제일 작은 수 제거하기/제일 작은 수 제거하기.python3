@@ -1,0 +1,10 @@
+def solution(arr):
+    answer = arr
+    if len(answer)==1:
+        answer[0]=-1
+    else:
+        answer.remove(min(answer))
+    return answer
+
+solution([4,3,2,1])
+solution([10])
