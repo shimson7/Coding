@@ -1,0 +1,11 @@
+def solution(a, b):
+    number = []
+    for i in range(len(a)):
+        num = a[i] * b[i]
+        number.append(num)
+
+    sum = 0
+    for i in range(len(number)):
+        sum += number[i]
+    answer = sum
+    return answer
