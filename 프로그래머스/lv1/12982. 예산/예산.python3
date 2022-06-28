@@ -1,0 +1,15 @@
+def solution(d, budget):
+    d=sorted(d)
+    plus=0
+    d_list=[]
+    if sum(d) == budget:
+        answer= len(d)
+        # print(len(d))
+    else:
+        for i in range(len(d)):
+            if plus+d[i]<=budget:
+                plus+=d[i]
+                d_list.append(d[i])
+        answer = len(d_list)
+        # print(answer)
+    return answer
