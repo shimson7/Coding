@@ -1,0 +1,8 @@
+def solution(s):
+    if len(s) % 2 != 0:  # 홀수라면
+        i = len(s) // 2
+        answer = s[i]
+    else:  # 짝수라면
+        i = len(s) // 2
+        answer = s[i - 1] + s[i]
+    return answer
