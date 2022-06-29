@@ -1,0 +1,19 @@
+from collections import deque
+
+def solution(priorities, location):
+    answer = 0
+    d=deque(priorities)
+    temp=deque([x for x in range(len(d))])
+    while d:
+        p = d.popleft()
+        if d:
+            if p < max(d):
+                temp.append(temp.popleft())
+                d.append(p)
+            else:
+                answer +=1
+                if temp[0] == location:
+                    return answer
+                else:
+                    temp.popleft()
+    return answer + 1
