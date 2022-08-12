@@ -1,0 +1,5 @@
+Minguk=list(map(int, input().split()))
+Manse=list(map(int, input().split()))
+Minguk=sum(Minguk)
+Manse=sum(Manse)
+print(max(Minguk, Manse))
