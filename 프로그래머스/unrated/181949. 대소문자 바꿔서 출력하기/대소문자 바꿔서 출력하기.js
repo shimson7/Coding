@@ -10,10 +10,15 @@ rl.on('line', function (line) {
     input = [line];
 }).on('close',function(){
     str = input[0];
-    var answer = "";
-    for(var x of str){
+    console.log(solution(str))
+});
+
+function solution(s) {
+    let answer = "";
+    for(let x of s){
         if(x===x.toUpperCase()) answer += x.toLowerCase()
         else answer += x.toUpperCase();
     }
-    console.log(answer);
-});
+
+    return answer;
+}
