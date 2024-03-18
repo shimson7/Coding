@@ -1,0 +1,7 @@
+-- 코드를 작성해주세요
+SELECT COUNT(
+    CASE
+      WHEN LENGTH IS NULL THEN 1
+    END
+    ) AS FISH_COUNT
+FROM FISH_INFO
