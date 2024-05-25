@@ -1,0 +1,28 @@
+t=int(input())
+
+inputs,l, s, n, k, m, V,v,grade=[], [], [], [], [], [],[],[],[]
+
+for i in range(t):
+  inputs.append(input())
+  l.append(int(inputs[i].split(" ")[0]))
+  s.append(int(inputs[i].split(" ")[1]))
+  n.append(int(inputs[i].split(" ")[2]))
+  k.append(int(inputs[i].split(" ")[3]))
+  m.append(int(inputs[i].split(" ")[4]))
+  V.append(inputs[i].strip().split(" ")[5:])
+
+  if n[i]>=100-((l[i]-s[i])/l[i])*100:
+    for j in range(len(V[i])):
+      if m[i]<=int(V[i][j]):
+        grade.append(1)
+
+      else:
+        grade.append(0)
+
+  else:
+    grade.append(0)
+
+if 0 in grade:
+	print(0)
+else:
+	print(1)
