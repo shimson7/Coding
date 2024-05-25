@@ -1,0 +1,12 @@
+-- 코드를 작성해주세요
+SELECT
+    e.ID,
+    COALESCE(COUNT(c.PARENT_ID), 0) AS CHILD_COUNT
+FROM
+    ECOLI_DATA e
+LEFT JOIN
+    ECOLI_DATA c ON e.ID = c.PARENT_ID
+GROUP BY
+    e.ID
+ORDER BY
+    e.ID ASC;
