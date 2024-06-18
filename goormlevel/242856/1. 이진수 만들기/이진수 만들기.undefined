@@ -1,0 +1,5 @@
+# -*- coding: utf-8 -*-
+# UTF-8 encoding when using korean
+user_input = int(input())
+b = format(user_input, 'b')
+print(b)
